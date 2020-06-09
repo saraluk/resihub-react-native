@@ -1,4 +1,4 @@
-## Instructions for Team Members
+## Instructions
 
 1. Install NodeJS https://nodejs.org/en/
 2. Open Terminal
