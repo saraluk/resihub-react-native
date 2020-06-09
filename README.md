@@ -13,7 +13,7 @@ npm install expo-cli --global
 ```
 5. In terminal, type following command
 ```bash
-git clone https://github.com/saraluk/cs639-apartment-react-native-project.git
+git clone https://github.com/saraluk/resihub-react-native.git
 ```
 6. cd into cs639-apartment-react-native-project
 ```bash
