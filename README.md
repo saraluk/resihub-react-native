@@ -5,7 +5,7 @@
 3. cd to a folder where you want the project folder to be.
 For example,
 ```bash
-cd Desktop/cs639
+cd Desktop/resihub-app
 ```
 4. Install expo commmand line tool, type following command
 ```bash
@@ -17,7 +17,7 @@ git clone https://github.com/saraluk/resihub-react-native.git
 ```
 6. cd into cs639-apartment-react-native-project
 ```bash
-cd cs639-apartment-react-native-project
+cd resihub-react-native
 ```
 7. Install Dependencies
 ```bash
