@@ -1,73 +1,73 @@
-import React, { Component } from "react";
-import { StyleSheet, View, Text } from "react-native";
-import { deviceHeight, deviceWidth } from "../constants/Layout";
-import LocationCard from "../components/LocationCard";
+import React, { Component } from 'react';
+import { StyleSheet, View, Text } from 'react-native';
+import { deviceHeight, deviceWidth } from '../constants/Layout';
+import LocationCard from '../components/LocationCard';
 
 export default class SearchScreen extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <View style={styles.TitleTextContainer}>
-          <Text style={styles.TitleText}>ResiHub</Text>
-          <Text style={styles.SubTitleText}>Where do you want to live ?</Text>
+        <View style={styles.titleTextContainer}>
+          <Text style={styles.titleText}>ResiHub</Text>
+          <Text style={styles.SubtitleText}>Where do you want to live ?</Text>
         </View>
         <View style={styles.buttonContainer}>
           <View style={styles.rowContainer}>
             <LocationCard
-              label={"Manhattan"}
+              label={'Manhattan'}
               onPress={() =>
-                this.props.navigation.navigate("SearchResultScreen", {
+                this.props.navigation.navigate('SearchResultScreen', {
                   key: 1,
-                  mainArea: "Manhattan",
+                  mainArea: 'Manhattan',
                 })
               }
             />
             <LocationCard
-              label={"Long Island City"}
+              label={'Long Island City'}
               onPress={() =>
-                this.props.navigation.navigate("SearchResultScreen", {
+                this.props.navigation.navigate('SearchResultScreen', {
                   key: 2,
-                  mainArea: "Long Island City",
+                  mainArea: 'Long Island City',
                 })
               }
             />
           </View>
           <View style={styles.rowContainer}>
             <LocationCard
-              label={"Brooklyn"}
+              label={'Brooklyn'}
               onPress={() =>
-                this.props.navigation.navigate("SearchResultScreen", {
+                this.props.navigation.navigate('SearchResultScreen', {
                   key: 3,
-                  mainArea: "Brooklyn",
+                  mainArea: 'Brooklyn',
                 })
               }
             />
             <LocationCard
-              label={"Jersey City"}
+              label={'Jersey City'}
               onPress={() =>
-                this.props.navigation.navigate("SearchResultScreen", {
+                this.props.navigation.navigate('SearchResultScreen', {
                   key: 4,
-                  mainArea: "Jersey City",
+                  mainArea: 'Jersey City',
                 })
               }
             />
           </View>
           <View style={styles.rowContainer}>
             <LocationCard
-              label={"Others"}
+              label={'Others'}
               onPress={() =>
-                this.props.navigation.navigate("SearchResultScreen", {
+                this.props.navigation.navigate('SearchResultScreen', {
                   key: 5,
-                  mainArea: "Others",
+                  mainArea: 'Others',
                 })
               }
             />
             <LocationCard
-              label={"All"}
+              label={'All'}
               onPress={() =>
-                this.props.navigation.navigate("SearchResultScreen", {
+                this.props.navigation.navigate('SearchResultScreen', {
                   key: null,
-                  mainArea: "All",
+                  mainArea: 'All',
                 })
               }
             />
@@ -85,30 +85,30 @@ SearchScreen.navigationOptions = {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#142536",
+    backgroundColor: '#142536',
   },
-  TitleTextContainer: {
+  titleTextContainer: {
     height: (2.8 * deviceHeight) / 20,
     padding: deviceWidth / 20,
   },
-  TitleText: {
-    color: "#ef4923",
+  titleText: {
+    color: '#ef4923',
     fontSize: 0.9 * (deviceHeight / 20),
-    fontWeight: "bold",
+    fontWeight: 'bold',
   },
-  SubTitleText: {
-    color: "#ffffff",
+  SubtitleText: {
+    color: '#ffffff',
     fontSize: (0.55 * deviceHeight) / 20,
-    fontWeight: "bold",
+    fontWeight: 'bold',
   },
   buttonContainer: {
     flex: 1,
     marginBottom: 0.5 * (deviceHeight / 20),
-    alignItems: "center",
+    alignItems: 'center',
   },
   rowContainer: {
     flex: 1,
-    flexDirection: "row",
-    alignItems: "center",
+    flexDirection: 'row',
+    alignItems: 'center',
   },
 });

@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 import {
   View,
   StyleSheet,
@@ -6,27 +6,27 @@ import {
   TextInput,
   TouchableHighlight,
   AsyncStorage,
-} from "react-native";
-import { deviceHeight, deviceWidth } from "../constants/Layout";
-import { Ionicons } from "@expo/vector-icons";
+} from 'react-native';
+import { deviceHeight, deviceWidth } from '../constants/Layout';
+import { Ionicons } from '@expo/vector-icons';
 
 export default class Comment extends Component {
   state = {
     rating: 0,
     list: this.props.apartmentObject.comments,
-    commentMessage: "",
-    username: "",
+    commentMessage: '',
+    username: '',
   };
 
   componentDidMount() {
-    AsyncStorage.getItem("username").then((value) =>
+    AsyncStorage.getItem('username').then((value) =>
       this.setState({ username: value })
     );
   }
 
   handleButtonClick = (rate) => {
     if (rate > 5 || rate < 1) {
-      return alert("Invalid Rating");
+      return alert('Invalid Rating');
     } else {
       this.setState({
         list: [
@@ -37,16 +37,16 @@ export default class Comment extends Component {
             username: this.state.username,
           },
         ],
-        commentMessage: "",
-        rating: "",
+        commentMessage: '',
+        rating: '',
       });
     }
   };
 
   handleButtunReset = () => {
     this.setState({
-      commentMessage: "",
-      rating: "",
+      commentMessage: '',
+      rating: '',
     });
   };
 
@@ -141,60 +141,60 @@ const styles = StyleSheet.create({
   commentDisplayContainer: {
     minHeight: 2 * (deviceHeight / 20),
     width: 16.5 * (deviceWidth / 20),
-    backgroundColor: "#eaeaea",
+    backgroundColor: '#eaeaea',
     borderRadius: 10,
     padding: 10,
     marginBottom: 0.3 * (deviceHeight / 20),
   },
   rowContainer: {
-    flexDirection: "row",
-    justifyContent: "space-between",
+    flexDirection: 'row',
+    justifyContent: 'space-between',
   },
   username: {
-    fontWeight: "bold",
+    fontWeight: 'bold',
   },
   starIconContainer: {
-    flexDirection: "row",
+    flexDirection: 'row',
   },
   icon: {
     fontSize: 0.5 * (deviceHeight / 20),
-    color: "#ef4923",
+    color: '#ef4923',
   },
   textInput: {
     height: 0.8 * (deviceHeight / 20),
     width: 16.5 * (deviceWidth / 20),
-    textAlign: "left",
-    borderColor: "#dddddd",
+    textAlign: 'left',
+    borderColor: '#dddddd',
     borderWidth: 1,
-    backgroundColor: "#eaeaea",
+    backgroundColor: '#eaeaea',
     padding: 4,
     marginBottom: 0.2 * (deviceHeight / 20),
   },
   textInputBox: {
     height: 3 * (deviceHeight / 20),
     width: 16.5 * (deviceWidth / 20),
-    textAlign: "left",
-    borderColor: "#dddddd",
+    textAlign: 'left',
+    borderColor: '#dddddd',
     borderWidth: 1,
-    backgroundColor: "#eaeaea",
+    backgroundColor: '#eaeaea',
     marginRight: 0.5 * (deviceWidth / 20),
     padding: 4,
     marginBottom: 0.2 * (deviceHeight / 20),
   },
   buttonContainer: {
-    alignItems: "flex-end",
+    alignItems: 'flex-end',
     marginBottom: 1 * (deviceHeight / 20),
   },
   button: {
     height: 0.7 * (deviceHeight / 20),
     width: 4 * (deviceWidth / 20),
     borderRadius: 50,
-    justifyContent: "center",
-    alignItems: "center",
-    backgroundColor: "#0a2e49",
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#0a2e49',
   },
   buttonText: {
-    color: "#ffffff",
+    color: '#ffffff',
   },
   space: {
     width: 0.3 * (deviceWidth / 20),
