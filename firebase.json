@@ -1,0 +1,10 @@
+{
+  "hosting": {
+    "public": "/Users/saraluk/Documents/Firebase/resihub-react-native/web-build ",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}

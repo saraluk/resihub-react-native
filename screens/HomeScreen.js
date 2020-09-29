@@ -4,7 +4,6 @@ import {
   Text,
   View,
   TouchableHighlight,
-  Image,
   ImageBackground,
 } from 'react-native';
 import { deviceHeight, deviceWidth } from '../constants/Layout';

@@ -1,10 +1,10 @@
-import React, { Component } from "react";
-import { StyleSheet, Text, View, TouchableHighlight } from "react-native";
-import { ScrollView } from "react-native-gesture-handler";
-import { deviceHeight, deviceWidth } from "../constants/Layout";
-import ApartmentCard from "../components/ApartmentCard";
+import React, { Component } from 'react';
+import { StyleSheet, Text, View, TouchableHighlight } from 'react-native';
+import { ScrollView } from 'react-native-gesture-handler';
+import { deviceHeight, deviceWidth } from '../constants/Layout';
+import ApartmentCard from '../components/ApartmentCard';
 
-const list = require("../util/SavedList.json");
+const list = require('../util/SavedList.json');
 export default class SavedScreen extends Component {
   state = {
     savedList: list.savedApartment,
@@ -26,14 +26,14 @@ export default class SavedScreen extends Component {
     const apartment = this.state.savedList.find(
       (apartment) => apartment.id == apartmentId
     );
-    apartment["isSaved"] = !apartment["isSaved"];
-    if (apartment["isSaved"] == true) {
+    apartment['isSaved'] = !apartment['isSaved'];
+    if (apartment['isSaved'] == true) {
       list.savedApartment.push(apartment);
       this.setState({
         savedList: list.savedApartment,
       });
     } else {
-      list["savedApartment"] = list.savedApartment.filter(
+      list['savedApartment'] = list.savedApartment.filter(
         (apartment) => apartment.id !== apartmentId
       );
       this.setState(() => ({
@@ -65,10 +65,10 @@ export default class SavedScreen extends Component {
               <ApartmentCard
                 key={apartment.id}
                 apartmentObject={apartment}
-                isSaved={apartment["isSaved"]}
+                isSaved={apartment['isSaved']}
                 handleToggle={this.handleToggle}
                 onPress={() =>
-                  this.props.navigation.navigate("ApartmentDetailScreen", {
+                  this.props.navigation.navigate('ApartmentDetailScreen', {
                     key: apartment.id,
                   })
                 }
@@ -83,27 +83,27 @@ export default class SavedScreen extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#ffffff",
+    backgroundColor: '#ffffff',
     paddingTop: (0.5 * deviceHeight) / 20,
   },
   rowContainer: {
-    flexDirection: "row",
+    flexDirection: 'row',
     marginBottom: (0.2 * deviceHeight) / 20,
     marginRight: (0.5 * deviceHeight) / 20,
   },
   buttonContainer: {
-    alignItems: "flex-end",
+    alignItems: 'flex-end',
   },
   button: {
     height: 0.7 * (deviceHeight / 20),
     width: 4 * (deviceWidth / 20),
     borderRadius: 50,
-    justifyContent: "center",
-    alignItems: "center",
-    backgroundColor: "#0a2e49",
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#0a2e49',
   },
   buttonText: {
-    color: "#ffffff",
+    color: '#ffffff',
   },
   space: {
     width: 0.3 * (deviceWidth / 20),

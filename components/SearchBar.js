@@ -1,8 +1,7 @@
-import React, { Component } from "react";
-import { StyleSheet, View, Text, TextInput } from "react-native";
-import { deviceHeight, deviceWidth } from "../constants/Layout";
-import { TouchableHighlight } from "react-native-gesture-handler";
-import { Ionicons } from "@expo/vector-icons";
+import React, { Component } from 'react';
+import { StyleSheet, View, Text, TextInput } from 'react-native';
+import { deviceHeight, deviceWidth } from '../constants/Layout';
+import { Ionicons } from '@expo/vector-icons';
 
 export default class SearchBar extends Component {
   render() {
@@ -36,21 +35,21 @@ const styles = StyleSheet.create({
     height: 2 * (deviceHeight / 20),
     marginVertical: 0.5 * (deviceHeight / 20),
     marginHorizontal: 0.5 * (deviceWidth / 20),
-    justifyContent: "space-between",
-    borderBottomColor: "#a5c1d6",
+    justifyContent: 'space-between',
+    borderBottomColor: '#a5c1d6',
     borderBottomWidth: 2,
   },
   rowContainer: {
-    flexDirection: "row",
-    justifyContent: "space-between",
+    flexDirection: 'row',
+    justifyContent: 'space-between',
   },
   searchBarContainer: {
-    flexDirection: "row",
-    alignItems: "center",
+    flexDirection: 'row',
+    alignItems: 'center',
     width: 19 * (deviceWidth / 20),
     height: deviceHeight / 20,
     borderWidth: 2,
-    borderColor: "#dddddd",
+    borderColor: '#dddddd',
     borderRadius: 10,
   },
   searchTextInput: {
@@ -58,25 +57,25 @@ const styles = StyleSheet.create({
     height: deviceHeight / 20,
   },
   searchIcon: {
-    color: "#dddddd",
+    color: '#dddddd',
     fontSize: 0.5 * (deviceHeight / 20),
     marginHorizontal: 0.3 * (deviceWidth / 20),
   },
   filterButton: {
     width: 4.5 * (deviceWidth / 20),
     height: deviceHeight / 20,
-    backgroundColor: "#0a2e49",
-    justifyContent: "center",
-    alignItems: "center",
+    backgroundColor: '#0a2e49',
+    justifyContent: 'center',
+    alignItems: 'center',
     borderRadius: 10,
   },
   filterTextButton: {
-    color: "#ffffff",
+    color: '#ffffff',
     fontSize: 0.5 * (deviceHeight / 20),
   },
   area: {
     fontSize: 0.4 * (deviceHeight / 20),
-    fontWeight: "bold",
+    fontWeight: 'bold',
     marginRight: 5,
   },
   results: {
